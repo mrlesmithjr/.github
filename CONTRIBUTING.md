@@ -1,17 +1,39 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+Thanks for taking the time to contribute! Please follow these guidelines to keep things smooth.
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+## Before You Start
+
+- Search existing issues and PRs before opening a new one — duplicates slow things down.
+- For significant changes, open an issue first to discuss the approach.
+- If your organization depends on these roles, consider [sponsoring maintenance](https://github.com/sponsors/mrlesmithjr).
 
 ## Pull Request Process
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+1. Fork the repo and create your branch from `master` or `main`.
+2. Test your changes with Molecule before submitting:
+   ```bash
+   molecule test
+   ```
+3. Update `README.md` if you're adding or changing variables, platforms, or behavior.
+4. Keep PRs focused — one fix or feature per PR makes review faster.
+5. Reference any related issue in the PR description.
+
+## Bug Reports
+
+Please use the bug report template and include:
+- OS/distribution and version
+- Ansible version (`ansible --version`)
+- Python version
+- Full error output
+
+## Development Notes
+
+- Roles follow [Ansible Galaxy](https://galaxy.ansible.com) conventions
+- Variable names use the role name as a prefix (e.g. `mariadb_*`)
+- Supported platforms are listed in `meta/main.yml`
+- CI runs via GitHub Actions using Molecule
+
+## Code of Conduct
+
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
